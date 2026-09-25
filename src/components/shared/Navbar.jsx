@@ -23,12 +23,12 @@ const Navbar = () => {
                     </button>
             </div>
             <div className='flex gap-2'>
-                <button className="flex items-center gap-2 rounded-2xl px-3 py-2 text-white hover:bg-gray-800">
+                <button className="flex items-center gap-2 rounded-2xl px-3 py-2 text-[#D1D5DB] hover:bg-gray-800">
                     Plan
                     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#ccff00] text-[11px] font-bold text-black"> 0 </span>
                 </button>
 
-                <button className="flex items-center gap-2 rounded-2xl px-3 py-2 text-[#9CA3AF]hover:bg-gray-800">
+                <button className="flex items-center gap-2 rounded-2xl px-3 py-2 text-[#9CA3AF] hover:bg-gray-800">
                     Saved
                     <span className="flex h-5 w-5 items-center justify-center rounded-full border border-gray-700 text-[11px]"> 0 </span>
                 </button>
