@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '@/assets/logo.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
@@ -18,9 +19,11 @@ const Navbar = () => {
             </div>
             <div className='flex gap-2'>
 
+                <Link href="/#workouts">
                 <button className='px-4 py-1 rounded-2xl hover:bg-gray-800 text-[#9CA3AF]'>
                     Workouts
                 </button>
+                </Link>
                 <button className='px-4 py-1 rounded-2xl hover:bg-gray-800 text-[#9CA3AF]'>
                     MyPlan
                 </button>

@@ -10,18 +10,20 @@ const getWorkouts = async () => {
 const Workouts = async () => {
     const workoutsData = await getWorkouts();
     return (
-        <div className='container mx-auto py-10'>
-            <div>
-                <h3 className='text-3xl font-bold'>THE LIBRARY</h3>
-                <p className='text-[#9CA3AF]'>Twelve lifts covering every major muscle group.</p>
+        <section id="workouts">
+            <div className='container mx-auto py-10'>
+                <div>
+                    <h3 className='text-3xl font-bold'>THE LIBRARY</h3>
+                    <p className='text-[#9CA3AF]'>Twelve lifts covering every major muscle group.</p>
+                </div>
+                <div className='grid gap-6 grid-cols-3'>
+                    {workoutsData.map((workout, ind) => {
+                        return <WorkoutCard workout={workout} key={ind} ></WorkoutCard>
+                    }
+                    )}
+                </div>
             </div>
-            <div className='grid gap-6 grid-cols-3'>
-                {workoutsData.map((workout, ind) => {
-                    return <WorkoutCard workout={workout} key={ind} ></WorkoutCard>
-                }
-                )}
-            </div>
-        </div>
+        </section>
     );
 };
 

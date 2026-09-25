@@ -2,9 +2,11 @@ import Image from 'next/image';
 import React from 'react';
 import { FaFire, FaRegClock } from 'react-icons/fa6';
 import { FaRegStar } from "react-icons/fa";
+import Link from 'next/link';
 
 const WorkoutCard = ({ workout }) => {
     return (
+        <Link href={`/workouts/${workout.id}`} >
         <div className='py-10'>
             <div className="bg-[#20242E] border border-[#2c3341] rounded-2xl overflow-hidden shadow-sm">
                 <figure className="w-full h-47.5">
@@ -59,6 +61,7 @@ const WorkoutCard = ({ workout }) => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 
