@@ -4,6 +4,10 @@ import logo from '@/assets/logo.png';
 
 const Footer = () => {
     return (
+        <> 
+
+         <div className="h-px bg-[#2c3341]" />
+       
         <div className='container mx-auto flex justify-between items-center py-5'>
             <div className='flex justify-between items-center gap-2'>
                 <Image
@@ -16,8 +20,10 @@ const Footer = () => {
             </div>
             <div>
                 <p className='text-sm text-[#6B7280]'>© 2026 FitLog — Workout Library. Train hard, log honest.</p>
-                </div>
+            </div>
         </div>
+
+         </>
     );
 };
 
