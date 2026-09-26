@@ -16,7 +16,7 @@ const Navbar = () => {
         <>
             <div className='container mx-auto flex justify-between items-center py-5'>
 
-                <div className='flex justify-between items-center gap-2'>
+                <div className='heading-font flex justify-between items-center gap-2'>
                     <Image
                         src={logo}
                         alt="FitLog logo"

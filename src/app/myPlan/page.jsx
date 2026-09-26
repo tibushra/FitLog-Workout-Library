@@ -97,7 +97,7 @@ const MyPlanPage = () => {
         <div className="container mx-auto px-8 py-8 text-white">
 
             <div>
-                <h1 className="text-3xl font-bold">
+                <h1 className="heading-font text-3xl font-bold">
                     MY PLAN
                 </h1>
                 <p className="text-[#9CA3AF] text-sm mt-1">
@@ -178,7 +178,7 @@ const MyPlanPage = () => {
             <div className="mt-4 space-y-3">
                 {sortedData.length === 0 ? (
                     <div className="border border-dashed border-[#242933] rounded-xl h-52.5 flex flex-col items-center justify-center">
-                        <h2 className="font-bold text-lg">
+                        <h2 className="heading-font font-bold text-lg">
                             NOTHING HERE YET
                         </h2>
                         <p className="text-sm text-[#7d8491] mt-2">
@@ -209,7 +209,7 @@ const MyPlanPage = () => {
 
                                 <div>
 
-                                    <h2 className="text-sm font-bold uppercase">
+                                    <h2 className="heading-font text-sm font-bold uppercase">
                                         {workout.name}
                                     </h2>
                                     <p className="text-xs text-[#7d8491] mt-0.5">

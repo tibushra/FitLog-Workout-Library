@@ -30,7 +30,7 @@ const WorkoutCard = ({ workout }) => {
                         ))}
                     </div>
                     <div>
-                        <h2 className='font-bold text-2xl'>
+                        <h2 className='heading-font font-bold text-2xl'>
                             {workout.name}
 
                         </h2>

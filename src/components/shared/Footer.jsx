@@ -16,7 +16,7 @@ const Footer = () => {
                     width={30}
                     height={30}
                 />
-                <h2 className='font-bold text-2xl'>FITLOG</h2>
+                <h2 className='heading-font font-bold text-2xl'>FITLOG</h2>
             </div>
             <div>
                 <p className='text-sm text-[#6B7280]'>© 2026 FitLog — Workout Library. Train hard, log honest.</p>

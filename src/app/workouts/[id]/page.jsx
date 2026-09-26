@@ -26,7 +26,7 @@ const WorkoutDetailsPage = async ({ params }) => {
                     height={500} />
             </figure>
             <div className="card-body grid gap-4">
-                <h2 className="card-title font-bold text-5xl">{workout.name}</h2>
+                <h2 className="heading-font  card-title font-bold text-5xl">{workout.name}</h2>
                 <p className='text-[#9CA3AF]'>{workout.description}</p>
                 <div className="flex gap-2">
                     {workout.muscleGroups.map((muscle) => (
