@@ -1,10 +1,11 @@
+import SavedButton from '../../../components/workoutsDetails/SavedButton';
+import TodaysPlanButton from '../../../components/workoutsDetails/TodaysPlanButton';
 import Image from 'next/image';
 import React from 'react'
-import { CiMedicalCase } from 'react-icons/ci';
-import { MdOutlineSaveAlt } from 'react-icons/md';
+
 
 const getWorkouts = async () => {
-    const reponse = await fetch("https://api.abcz.workers.dev/api/fitlog");
+    const reponse = await fetch("https://api.api-store.workers.dev/api/fitlog");
     const data = await reponse.json();
     return data;
 }
@@ -91,12 +92,8 @@ const WorkoutDetailsPage = async ({ params }) => {
                     </ol>
                 </div>
                 <div className="card-actions justify-start">
-                    <button className='flex gap-2 items-center bg-[#CCFF00] px-4 py-2 rounded-md text-[#0F1115] font-semibold hover:bg-[#90aa28]'>
-                        <CiMedicalCase /> Add to todays plan
-                    </button>
-                    <button className='flex gap-2 items-center border border-[#2c3341] px-4 py-2 rounded-md text-[#E5E7EB] font-semibold hover:bg-gray-800'>
-                        <MdOutlineSaveAlt /> Save for later
-                    </button>
+                  <TodaysPlanButton workout={workout}></TodaysPlanButton>
+                    <SavedButton workout={workout}></SavedButton>
                 </div>
             </div>
         </div>
