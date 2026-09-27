@@ -94,45 +94,45 @@ const MyPlanPage = () => {
     };
 
     return (
-        <div className="container mx-auto px-8 py-8 text-white">
+        <div className="container mx-auto sm:px-6 lg:px-8 py-6 sm:py-8 text-white">
 
             <div>
-                <h1 className="heading-font text-3xl font-bold">
+                <h1 className="heading-font text-2xl sm:text-3xl font-bold">
                     MY PLAN
                 </h1>
-                <p className="text-[#9CA3AF] text-sm mt-1">
+                <p className="text-[#9CA3AF] text-xs sm:text-sm mt-1">
                     Cap of five lifts for today. Finish them, then load more.
                 </p>
             </div>
-            <div className="mt-6 bg-[#13161c] border border-[#242933] rounded-xl px-5 py-6">
+            <div className="mt-5 sm:mt-6 bg-[#13161c] border border-[#242933] rounded-xl px-4 sm:px-5 py-5 sm:py-6">
                 <div className="grid grid-cols-3">
                     <div className="border-r border-[#242933]">
-                        <p className="text-xs text-[#7d8491]">
+                        <p className="text-[10px] sm:text-xs text-[#7d8491]">
                             Exercises
                         </p>
-                        <p className="text-3xl font-bold text-[#CCFF00] mt-1">
+                        <p className="text-2xl sm:text-3xl font-bold text-[#CCFF00] mt-1">
                             {totalExercises}
                         </p>
                     </div>
                     <div className="border-r border-[#242933] pl-6">
-                        <p className="text-xs text-[#7d8491]">
+                        <p className="text-[10px] sm:text-xs text-[#7d8491]">
                             Minutes
                         </p>
-                        <p className="text-3xl font-bold mt-1">
+                        <p className="text-2xl sm:text-3xl font-bold mt-1">
                             {totalMinutes}
                         </p>
                     </div>
                     <div className="pl-6">
-                        <p className="text-xs text-[#7d8491]">
+                        <p className="text-[10px] sm:text-xs text-[#7d8491]">
                             Calories
                         </p>
-                        <p className="text-3xl font-bold mt-1">
+                        <p className="text-2xl sm:text-3xl font-bold mt-1">
                             {totalCalories}
                         </p>
                     </div>
                 </div>
             </div>
-            <div className="mt-6 flex items-center justify-between">
+            <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex items-center bg-[#13161c] border border-[#242933] rounded-lg p-1">
                     <button
                         onClick={() => setActiveTab("today")}
@@ -145,7 +145,7 @@ const MyPlanPage = () => {
                         Saved
                     </button>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center sm:justify-end gap-2">
                     <span className="text-xs text-[#7d8491]">
                         Sort By
                     </span>
@@ -178,10 +178,10 @@ const MyPlanPage = () => {
             <div className="mt-4 space-y-3">
                 {sortedData.length === 0 ? (
                     <div className="border border-dashed border-[#242933] rounded-xl h-52.5 flex flex-col items-center justify-center">
-                        <h2 className="heading-font font-bold text-lg">
+                        <h2 className="heading-font font-bold text-base sm:text-lg">
                             NOTHING HERE YET
                         </h2>
-                        <p className="text-sm text-[#7d8491] mt-2">
+                        <p className="text-xs sm:text-sm text-[#7d8491] mt-2">
                             Browse the library and add a lift to get today moving.
                         </p>
                         <Link
@@ -195,9 +195,9 @@ const MyPlanPage = () => {
 
                         <div
                             key={workout.id}
-                            className="bg-[#13161c] border border-[#242933] rounded-xl px-3 py-3 flex items-center justify-between" >
-                            <div className="flex items-center gap-3">
-                                <div className="w-25 h-14 rounded-lg overflow-hidden bg-[#242933] shrink-0">
+                            className="bg-[#13161c] border border-[#242933] rounded-xl p-3 sm:px-3 sm:py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4" >
+                            <div className="flex items-start sm:items-center gap-3">
+                                <div className="w-20 sm:w-25 h-14 rounded-lg overflow-hidden bg-[#242933] shrink-0">
                                     <Image
                                         src={workout.image}
                                         alt={workout.name}
@@ -248,7 +248,7 @@ const MyPlanPage = () => {
 
                                 <Link href={`/workouts/${workout.id}`}>
                                     <button
-                                        className="border border-[#303846] text-[#d1d5db] text-[10px] px-4 py-2 rounded-full hover:bg-[#242933] transition"
+                                        className="border border-[#303846] text-[#d1d5db] text-[10px] px-3 sm:px-4 py-2 rounded-full hover:bg-[#242933] transition"
                                     >
                                         View Details
                                     </button>
@@ -257,7 +257,7 @@ const MyPlanPage = () => {
                                 {activeTab === "today" ? (
                                     <button
                                         onClick={() => markAsDone(workout.id)}
-                                        className="bg-[#CCFF00] text-black text-[10px] font-bold px-4 py-2 rounded-full hover:bg-[#b8e600] transition flex items-center gap-1">
+                                        className="flex-1 sm:flex-none bg-[#CCFF00] text-black text-[10px] font-bold px-4 py-2 rounded-full hover:bg-[#414c14] transition flex items-center gap-1">
                                         <span className="text-xs">
                                             ✓
                                         </span>

@@ -11,7 +11,7 @@ const Workouts = async () => {
     const workoutsData = await getWorkouts();
     return (
         <section id="workouts">
-            <div className='container mx-auto px-4 sm:px-6 lg:px-0 py-8 sm:py-10 py-10'>
+            <div className='container mx-auto px-4 sm:px-6 lg:px-0 py-8 sm:py-10'>
                 <div>
                     <h3 className='heading-font text-2xl sm:text-3xl font-bold'>THE LIBRARY</h3>
                     <p className='text-[#9CA3AF]'>Twelve lifts covering every major muscle group.</p>
