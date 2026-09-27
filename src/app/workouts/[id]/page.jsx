@@ -26,13 +26,13 @@ const WorkoutDetailsPage = async ({ params }) => {
                     height={500} />
             </figure>
             <div className="card-body grid gap-4">
-                <h2 className="heading-font  card-title font-bold text-5xl">{workout.name}</h2>
+                <h2 className="heading-font card-title font-bold text-5xl">{workout.name}</h2>
                 <p className='text-[#9CA3AF]'>{workout.description}</p>
                 <div className="flex gap-2">
                     {workout.muscleGroups.map((muscle) => (
                         <span
                             key={muscle}
-                            className="badge badge-sm bg-[#C2F800] text-[#000000] font-bold px-3 py-3  rounded-4xl"
+                            className="badge badge-sm bg-[#C2F800] text-[#000000] font-bold px-3 py-3 rounded-4xl"
                         >
                             {muscle.toUpperCase()}
                         </span>
@@ -92,7 +92,7 @@ const WorkoutDetailsPage = async ({ params }) => {
                     </ol>
                 </div>
                 <div className="card-actions justify-start">
-                  <TodaysPlanButton workout={workout}></TodaysPlanButton>
+                    <TodaysPlanButton workout={workout}></TodaysPlanButton>
                     <SavedButton workout={workout}></SavedButton>
                 </div>
             </div>
